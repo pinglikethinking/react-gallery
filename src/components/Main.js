@@ -30,6 +30,24 @@ class ImgFigure extends React.Component {
 }
 
 class AppComponent extends React.Component {
+  constructor(props) {
+    super(props);
+    this.Constant = {
+      centerPos: {
+        left: 0,
+        top: 0
+      },
+      hPosRange: {
+        leftSecX: [0,0],
+        rightSecX: [0,0],
+        y: [0,0]
+      },
+      vPosRange: {
+        x: [0,0],
+        topY: [0,0]
+      }
+    };
+  }
   render() {
     var controllerUnits = [],
       imgFigures = [];
