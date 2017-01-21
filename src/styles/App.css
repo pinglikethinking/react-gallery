@@ -30,6 +30,28 @@ image
 
   background-color: #ddd;
 }
+.img-sec__img-figure{
+  width: 320px;
+  height: 360px;
+  margin:0;
+  padding: 40px;
+
+  position: absolute;
+  
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+
+  background-color: #fff;
+}
+.img-sec__img-figure figcaption{
+  text-align: center;
+}
+.img-sec__img-title{
+  margin: 20px 0 0 0;
+   color: #a7a0a2;
+  font-size: 16px;
+}
 /*
 controller nav
  */

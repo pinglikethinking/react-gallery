@@ -4,7 +4,7 @@ require('styles/App.css');
 import React from 'react';
 
 //获取图片相关数据
-var imageDatas = require('../data/imageDatas.json');
+var imageDatas = require('json!../data/imageDatas.json');
 //将图片名信息转换为url
 imageDatas = (function(imageDatasArray){
   for(var i = 0, j = imageDatasArray.length; i < j; i++){
@@ -15,15 +15,36 @@ imageDatas = (function(imageDatasArray){
   return imageDatasArray;
 })(imageDatas);
 
+//声明图片流组件
+class ImgFigure extends React.Component {
+  render() {
+    return (
+      <figure className="img-sec__img-figure">
+        <img src = {this.props.data.imageURL} alt = {this.props.data.title}/>
+        <figcaption>
+          <h2 className="img-sec__img-title">{this.props.data.title}</h2>
+        </figcaption>
+      </figure>
+    );
+  }
+}
+
 class AppComponent extends React.Component {
   render() {
+    var controllerUnits = [],
+      imgFigures = [];
+
+    imageDatas.forEach(function(value,index){
+        imgFigures.push(<ImgFigure data = {value} key={index}/>);
+      }
+    );
     return (
       <section className="stage">
         <section className="img-sec">
-
+          {imgFigures}
         </section>
         <nav className="controller-nav">
-
+          {controllerUnits}
         </nav>
       </section>
     );
