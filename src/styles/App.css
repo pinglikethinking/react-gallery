@@ -1,5 +1,5 @@
 @font-face {
-  font-family: 'iconfont';
+  font-family: 'icons-turn-arrow';
   src: url('../fonts/icons/turn-arrow.eot') format("embedded-opentype"), /* IE*/
   url('../fonts/icons/turn-arrow.woff') format('woff'), /* chrome、firefox */
   url('../fonts/icons/turn-arrow.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
@@ -96,7 +96,7 @@ controller nav
 .is-center::after{
   line-height: 30px;
   font-family: "icons-turn-arrow";
-  content: '\e600';
+  content: '\E600';
   color: #fff;
 }
 
