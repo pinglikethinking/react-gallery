@@ -35,6 +35,7 @@ image
   height: 100%;
   overflow: hidden;
 
+  -webkit-perspective: 1800px;
   background-color: #ddd;
 }
 .img-sec__img-figure{
@@ -42,17 +43,26 @@ image
   height: 360px;
   margin:0;
   padding: 40px;
-
+  cursor: pointer;
   position: absolute;
 
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 
+  transform-origin: 0 50% 0;
+  transform-style: preserve-3d;
+
+  transition: transform .6s ease-in-out, left .6s ease-in-out, right .6s ease-in-out;
   background-color: #fff;
 }
+.sec__figure-is-inverse{
+  transform: translate(320px) rotateY(180deg);
+}
 .img-sec__img-figure figcaption{
-  text-align: center;
+  text-align:center;
+  margin:20px 0 0 0;
+  color:#a7a0a2;
 }
 .img-sec__img-title{
   margin: 20px 0 0 0;
@@ -60,7 +70,18 @@ image
   font-size: 16px;
 }
 .img-sec__img-back{
-
+  position:absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  padding: 30px;
+  box-sizing: border-box;
+  text-align: center;
+  color: #666;
+  transform: rotateY(180deg) translateZ(1px);
+  backface-visibility:hidden;
+  background-color: #fff;
 }
 /*
 controller nav

@@ -59,7 +59,7 @@ class ImgFigure extends React.Component{
       styleObj.zIndex = 11;
     }
     let imgFigureClassName = 'img-sec__img-figure';
-    imgFigureClassName += this.props.arrage.isInverse ? ' is-inverse' : '';
+    imgFigureClassName += this.props.arrage.isInverse ? ' sec__figure-is-inverse' : '';
     return(
       <figure className={imgFigureClassName} style={styleObj} onClick={this.handleClick}>
         <img src={this.props.data.imageURL} alt={this.props.data.title}/>
@@ -142,7 +142,7 @@ class AppComponent extends React.Component {
   /*
    *翻转图片
    *@param index 输入当前被执行inverse操作对应图片信息的index值
-   *@return {function} 只是一个闭包函数,其内ruturn 一个被执行的函数
+   *@return {function} 只是一个闭包函数,其内return 一个被执行的函数
    */
   inverse(index){
     return () =>{
